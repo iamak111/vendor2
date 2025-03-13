@@ -49,7 +49,7 @@ const TabNavigation = ({ navigation, route }) => {
           tabBarLabel: "Orders",
           tabBarIcon: ({ focused, color, size }) => (
             <Ionicons
-              name={focused ? "ios-apps-sharp" : "ios-apps-outline"}
+              name={focused ? "apps-sharp" : "apps-outline"}
               color={color}
               size={size}
             />

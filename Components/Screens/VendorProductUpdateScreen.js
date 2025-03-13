@@ -156,7 +156,7 @@ export default function VendorProductUpdate({ navigation, route }) {
     };
     await axios({
       method: "get",
-      url: `${BASE_URL}category`,
+      url: `${BASE_URL}category?forWho=vendor`,
       headers: headers,
     })
       .then(async (res) => {

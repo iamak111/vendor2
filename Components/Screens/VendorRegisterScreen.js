@@ -97,9 +97,11 @@ export default function VendorRegister({ navigation }) {
           ? ["application/pdf", "application/msword"]
           : ["image/jpeg", "image/png"],
     });
-    if (result.type === "success") {
+
+    console.log(result)
+    if (result.canceled === false&&result.assets.length === 1) {
       setImgIndicator(true);
-      uploadFile(result.uri, idType);
+      uploadFile(result.assets[0].uri, idType);
       // console.log(result);
     }
   };
@@ -603,6 +605,7 @@ export default function VendorRegister({ navigation }) {
             ) {
               RegisterVendor();
             } else {
+              console.log(ImageDocs)
               alert("Please Upload Documents.");
             }
           }}

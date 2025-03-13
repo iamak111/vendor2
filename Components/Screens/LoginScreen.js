@@ -26,7 +26,7 @@ const LoginScreen = ({ navigation }) => {
     await axios({
       method: "POST",
       url: `${BASE_URL}user/user-otp?role:vendor`,
-      data: { phone: selected + phone, role: "vendor" },
+      data: { phone: selected + phone, role: "vendor",for:"themobsterstash" },
     })
       .then((res) => {
         navigation.replace("OTP", {
